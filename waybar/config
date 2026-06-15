@@ -1,0 +1,66 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+    ],
+
+  "hyprland/window": {
+  "max-length": 35,
+  "separate-outputs": true
+   },
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "cpu",
+    "memory",
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "tray"
+  ],
+
+  "clock": {
+    "format": "{:%H:%M  %d-%m-%Y}"
+  },
+
+  "cpu": {
+    "format": "CPU {usage}%"
+  },
+
+  "memory": {
+    "format": "RAM {}%"
+  },
+
+  "network": {
+  "format-wifi": "",
+  "format-ethernet": "󰈀",
+  "format-disconnected": "󰖪",
+  "tooltip-format-wifi": "{essid}\nSignal: {signalStrength}%",
+  "tooltip-format-ethernet": "Ethernet Connected",
+  "tooltip-format-disconnected": "No Network Connection"
+  },
+
+"bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
+    "tooltip-format": "{device_alias}",
+    "on-click": "/home/pratham/.config/waybar/scripts/bluetooth-menu.sh",
+    "on-right-click": "blueman-manager",
+    "interval": 5
+  },   
+
+  "pulseaudio": {
+    "format": " {volume}%"
+  },
+
+  "tray": {
+    "spacing": 8
+  }
+}   

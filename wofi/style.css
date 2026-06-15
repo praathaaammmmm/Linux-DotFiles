@@ -1,0 +1,58 @@
+
+window {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    border-radius: 10px;
+}
+
+entry {
+    margin: 5px;
+    padding: 8px;
+}
+
+window {
+    margin: 0px;
+    border: 2px solid #7aa2f7;
+    border-radius: 14px;
+    background-color: #1a1b26;
+}
+
+#input {
+    margin: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #24283b;
+    color: #c0caf5;
+}
+
+#inner-box {
+    margin: 10px;
+    background-color: #1a1b26;
+}
+
+#outer-box {
+    margin: 0px;
+    padding: 10px;
+    background-color: #1a1b26;
+}
+
+#scroll {
+    margin: 0px;
+}
+
+#entry {
+    padding: 10px;
+    border-radius: 8px;
+    color: #c0caf5;
+}
+
+#entry:selected {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+}
+
+#text {
+    margin-left: 8px;
+}
+
