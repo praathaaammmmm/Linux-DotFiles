@@ -1,37 +1,153 @@
 * {
-  font-family: "JetBrainsMono Nerd Font";
-  font-size: 12px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 0;
 }
 
 window#waybar {
-  background: rgba(10,10,10,0.75);
-  color: white;
+    background: transparent;
+    color: #ECEFF4;
 }
 
-#workspaces button,
+/* Floating modules */
+#custom-logo,
+#workspaces,
 #clock,
 #cpu,
 #memory,
 #network,
-#bluetooth,
 #pulseaudio,
+#bluetooth,
 #tray {
-  background: #111111;
-  border-radius: 12px;
-  margin: 4px;
-  padding: 0 12px;
+    background: rgba(18,18,20,0.88);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0 16px;
+    transition: 200ms;
 }
 
+/* Logo */
+#custom-logo {
+    color: #7aa2f7;
+    font-size: 18px;
+    padding: 0 18px;
+}
+
+/* Workspace container */
+#workspaces {
+    padding: 4px;
+}
+
+/* Workspace buttons */
 #workspaces button {
-  color: #777777;
-  transition: all 0.2s ease;
+    border-radius: 10px;
+    padding: 0 12px;
+    color: #8b8b8b;
+    transition: 200ms;
 }
 
+/* Active workspace */
 #workspaces button.active {
-  background: #ffffff;
-  color: #000000;
+    background: #ffffff;
+    color: #000000;
 }
 
-#workspaces button:hover {
-  background: #222222;
+/* Hover */
+#workspaces button:hover,
+#custom-logo:hover,
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#pulseaudio:hover,
+#bluetooth:hover,
+#tray:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+/* Tray */
+#tray {
+    padding-right: 12px;
+    padding-left: 12px;
+}* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #ECEFF4;
+}
+
+/* Floating modules */
+#custom-logo,
+#workspaces,
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#bluetooth,
+#tray {
+    background: rgba(18,18,20,0.88);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0 16px;
+    transition: 200ms;
+}
+
+/* Logo */
+#custom-logo {
+    color: #7aa2f7;
+    font-size: 18px;
+    padding: 0 18px;
+}
+
+/* Workspace container */
+#workspaces {
+    padding: 4px;
+}
+
+/* Workspace buttons */
+#workspaces button {
+    border-radius: 10px;
+    padding: 0 12px;
+    color: #8b8b8b;
+    transition: 200ms;
+}
+
+/* Active workspace */
+#workspaces button.active {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Hover */
+#workspaces button:hover,
+#custom-logo:hover,
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#pulseaudio:hover,
+#bluetooth:hover,
+#tray:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+/* Tray */
+#tray {
+    padding-right: 12px;
+    padding-left: 12px;
 }

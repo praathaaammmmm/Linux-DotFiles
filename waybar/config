@@ -2,11 +2,11 @@
   "layer": "top",
   "position": "top",
 
-  "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/window"
-  ],
-
+   "modules-left": [
+  "custom/logo",
+  "hyprland/workspaces"
+],
+ 
   "hyprland/window": {
     "max-length": 35,
     "separate-outputs": true
@@ -24,6 +24,12 @@
     "pulseaudio",
     "tray"
   ],
+
+	"custom/logo": {
+  "format": "",
+  "tooltip": false,
+  "on-click": "wofi --show drun"
+},
 
   "clock": {
     "format": "{:%H:%M}"
