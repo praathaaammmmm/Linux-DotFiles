@@ -1,22 +1,14 @@
 * {
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 13px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 12px;
 }
 
 window#waybar {
-    background: rgba(26, 27, 38, 0.85);
-    color: #c0caf5;
+  background: rgba(10,10,10,0.75);
+  color: white;
 }
 
-#workspaces button {
-    padding: 0 10px;
-    color: #a9b1d6;
-}
-
-#workspaces button.active {
-    color: #7aa2f7;
-}
-
+#workspaces button,
 #clock,
 #cpu,
 #memory,
@@ -24,11 +16,22 @@ window#waybar {
 #bluetooth,
 #pulseaudio,
 #tray {
-    padding: 0 10px;
-    margin: 4px;
+  background: #111111;
+  border-radius: 12px;
+  margin: 4px;
+  padding: 0 12px;
 }
 
-#window {
-    color: #c0caf5;
-    padding-left: 12px;
+#workspaces button {
+  color: #777777;
+  transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+  background: #ffffff;
+  color: #000000;
+}
+
+#workspaces button:hover {
+  background: #222222;
 }
