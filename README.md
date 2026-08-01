@@ -2,7 +2,7 @@
 
 # Linux-DotFiles
 
-A minimal and modern Arch Linux + Hyprland desktop focused on development, productivity, and gaming.
+A minimal and modern **Arch Linux + Hyprland** desktop focused on **development**, **productivity**, and **gaming**.
 
 <img src="assets/desktop.png" alt="Desktop Preview" width="100%">
 
@@ -10,7 +10,7 @@ A minimal and modern Arch Linux + Hyprland desktop focused on development, produ
 
 ---
 
-## ✨ Features
+# ✨ Features
 
 - Minimal Hyprland desktop
 - Floating glass Waybar
@@ -21,16 +21,16 @@ A minimal and modern Arch Linux + Hyprland desktop focused on development, produ
 - Hyprlock + Hypridle
 - NVIDIA friendly
 - Gaming ready
-- Developer focused workflow
+- Developer-focused workflow
 
 ---
 
-## 🖥️ Components
+# 🖥 Components
 
-| Component | Application |
-|-----------|-------------|
-| WM | Hyprland |
-| Bar | Waybar |
+| Component | Software |
+|-----------|----------|
+| Window Manager | Hyprland |
+| Status Bar | Waybar |
 | Launcher | Wofi |
 | Terminal | Kitty |
 | Notifications | SwayNC |
@@ -43,63 +43,72 @@ A minimal and modern Arch Linux + Hyprland desktop focused on development, produ
 
 ---
 
-# Screenshots
+# 📸 Screenshots
 
-## 🖥️ Desktop
+## Desktop
 
 <img src="assets/desktop.png" width="100%">
 
 ---
 
-## 🚀 Wofi Launcher
+## Wofi Launcher
 
 <img src="assets/wofi.jpg" width="100%">
 
 ---
 
-## 💻 Development Setup
+## Development Workspace
 
 <img src="assets/geek.jpg" width="100%">
 
 ---
 
-## 🎮 Gaming
+## Gaming Setup
 
 <img src="assets/gaming.jpg" width="100%">
 
 ---
 
-## 📦 Random Applications
+## Daily Applications
 
 <img src="assets/random_application.jpg" width="100%">
 
 ---
 
-## 📁 Repository Structure
+# 🚀 Installation
 
-```text
-.
-├── hypr/
-├── kitty/
-├── waybar/
-├── wofi/
-├── assets/
-└── README.md
-```
-
----
-
-## 🚀 Installation
-
-Clone the repository
+## Clone the repository
 
 ```bash
 git clone https://github.com/praathaaammmmm/Linux-DotFiles.git
+cd Linux-DotFiles
 ```
 
-Copy the required configuration folders into your `~/.config`.
+## Install the core packages
 
-Example:
+```bash
+sudo pacman -S \
+hyprland \
+waybar \
+kitty \
+wofi \
+hyprlock \
+hypridle \
+swaync \
+blueman \
+network-manager-applet
+```
+
+## Install the required fonts
+
+```bash
+sudo pacman -S \
+ttf-jetbrains-mono-nerd \
+noto-fonts \
+noto-fonts-emoji
+```
+
+## Copy the configuration
 
 ```bash
 cp -r hypr ~/.config/
@@ -108,12 +117,68 @@ cp -r kitty ~/.config/
 cp -r wofi ~/.config/
 ```
 
-Restart Hyprland or reload the affected applications.
+Reload Hyprland or restart the applications.
 
 ---
 
-## ⭐ If you like this setup
+# 📦 Optional Software
 
-Leave a star on the repository.
+These applications are used in the screenshots and integrate well with the setup.
 
-It helps others discover the project and motivates future updates.
+- Brave
+- Firefox
+- Visual Studio Code
+- Discord
+- Steam
+- Spotify
+- VLC
+- btop
+- fastfetch
+- mpvpaper
+- Polychromatic
+
+---
+
+# ⌨ Useful Keybindings
+
+| Shortcut | Action |
+|----------|--------|
+| Super + Enter | Open Kitty |
+| Super + D | Open Wofi |
+| Super + Q | Close Window |
+| Super + F | Toggle Fullscreen |
+| Super + 1-9 | Switch Workspace |
+| Super + Shift + 1-9 | Move Window |
+| Super + Mouse | Move/Floating Window |
+
+---
+
+# 🔤 Fonts
+
+- JetBrainsMono Nerd Font
+- Noto Fonts
+- Noto Emoji
+
+---
+
+# 📂 Repository Structure
+
+```text
+.
+├── assets/
+├── hypr/
+├── kitty/
+├── waybar/
+├── wofi/
+├── README.md
+```
+
+---
+
+<div align="center">
+
+### ⭐ If you like this setup, consider giving the repository a star!
+
+It motivates future improvements and helps others discover the project.
+
+</div>
