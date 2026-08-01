@@ -1,58 +1,74 @@
+/* ==========================================
+   Glass Wofi
+========================================== */
 
-window {
-    background-color: #1e1e2e;
-    color: #cdd6f4;
-    border-radius: 10px;
-}
-
-entry {
-    margin: 5px;
-    padding: 8px;
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
 }
 
 window {
-    margin: 0px;
-    border: 2px solid #7aa2f7;
-    border-radius: 14px;
-    background-color: #1a1b26;
-}
-
-#input {
-    margin: 10px;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    background-color: #24283b;
-    color: #c0caf5;
-}
-
-#inner-box {
-    margin: 10px;
-    background-color: #1a1b26;
+    background: rgba(18,20,25,0.45);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
 }
 
 #outer-box {
-    margin: 0px;
-    padding: 10px;
-    background-color: #1a1b26;
+    margin: 18px;
+}
+
+#input {
+
+    background: rgba(255,255,255,0.06);
+
+    color: #ECEFF4;
+
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 14px;
+
+    margin-bottom: 18px;
+}
+
+#input:focus {
+    background: rgba(255,255,255,0.10);
 }
 
 #scroll {
-    margin: 0px;
+    background: transparent;
+}
+
+#inner-box {
+    background: transparent;
 }
 
 #entry {
-    padding: 10px;
-    border-radius: 8px;
-    color: #c0caf5;
+
+    padding: 12px;
+
+    margin: 3px 0;
+
+    border-radius: 12px;
+
+    transition: all 150ms ease;
+}
+
+#entry:hover {
+
+    background: rgba(255,255,255,0.05);
 }
 
 #entry:selected {
-    background-color: #7aa2f7;
-    color: #1a1b26;
+
+    background: rgba(255,255,255,0.12);
+}
+
+#img {
+    margin-right: 14px;
 }
 
 #text {
-    margin-left: 8px;
+    color: #ECEFF4;
 }
-

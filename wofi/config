@@ -1,7 +1,22 @@
 show=drun
 prompt=Search...
-width=400
-height=500
-location=center
 allow_images=true
+image_size=32
 
+width=640
+height=520
+
+location=center
+
+columns=1
+lines=8
+
+gtk_dark=true
+term=kitty
+
+hide_scroll=true
+no_actions=true
+normal_window=false
+
+matching=fuzzy
+insensitive=true

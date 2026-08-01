@@ -2,15 +2,12 @@
   "layer": "top",
   "position": "top",
 
-   "modules-left": [
-  "custom/logo",
-  "hyprland/workspaces"
-],
- 
-  "hyprland/window": {
-    "max-length": 35,
-    "separate-outputs": true
-  },
+  "spacing": 6,
+
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces"
+  ],
 
   "modules-center": [
     "clock"
@@ -25,48 +22,45 @@
     "tray"
   ],
 
-	"custom/logo": {
-  "format": "",
-  "tooltip": false,
-  "on-click": "wofi --show drun"
-},
+  "custom/logo": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "wofi --show drun"
+  },
 
   "clock": {
-    "format": "{:%H:%M}"
+    "format": "󰥔 {:%H:%M}",
+    "tooltip-format": "{:%A, %d %B %Y}"
   },
 
   "cpu": {
-    "format": "CPU {usage}%"
+    "format": " {usage}%"
   },
 
   "memory": {
-    "format": "RAM {}%"
+    "format": "󰍛 {}%"
   },
 
   "network": {
-    "format-wifi": "",
+    "format-wifi": "󰖩",
     "format-ethernet": "󰈀",
     "format-disconnected": "󰖪",
-    "tooltip-format-wifi": "{essid}\nSignal: {signalStrength}%",
-    "tooltip-format-ethernet": "Ethernet Connected",
-    "tooltip-format-disconnected": "No Network Connection"
+    "tooltip-format-wifi": "{essid}\n{signalStrength}%"
   },
 
   "bluetooth": {
-    "format": "",
+    "format": "󰂯",
     "format-disabled": "󰂲",
-    "format-connected": "",
     "tooltip-format": "{device_alias}",
     "on-click": "/home/pratham/.config/waybar/scripts/bluetooth-menu.sh",
-    "on-right-click": "blueman-manager",
     "interval": 5
   },
 
   "pulseaudio": {
-    "format": " {volume}%"
+    "format": "󰕾 {volume}%"
   },
 
   "tray": {
-    "spacing": 8
+    "spacing": 10
   }
 }
