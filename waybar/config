@@ -1,7 +1,6 @@
 {
   "layer": "top",
   "position": "top",
-
   "spacing": 6,
 
   "modules-left": [
@@ -19,11 +18,12 @@
     "network",
     "bluetooth",
     "pulseaudio",
+    "mpris",
     "tray"
   ],
 
   "custom/logo": {
-    "format": "",
+    "format": "󰌠",
     "tooltip": false,
     "on-click": "wofi --show drun"
   },
@@ -34,7 +34,7 @@
   },
 
   "cpu": {
-    "format": " {usage}%"
+    "format": "󰭆 {usage}%"
   },
 
   "memory": {
@@ -62,5 +62,25 @@
 
   "tray": {
     "spacing": 10
-  }
+  },
+
+"mpris": {
+  "format": "{player_icon}",
+  "format-paused": "{player_icon}",
+  "format-stopped": "",
+  "player-icons": {
+    "default": "󰎆",
+    "spotify": "󰎆",
+    "firefox": "󰎆",
+    "brave": "󰎆",
+    "mpv": "󰎆",
+    "vlc": "󰎆"
+  },
+  "tooltip": true,
+  "tooltip-format": "{player}\n{title}\n{artist}",
+  "on-click": "eww open --toggle music_popup",
+  "on-click-middle": "playerctl play-pause",
+  "on-scroll-up": "playerctl next",
+  "on-scroll-down": "playerctl previous"
+}
 }
