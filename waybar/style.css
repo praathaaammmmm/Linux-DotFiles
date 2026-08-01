@@ -2,6 +2,7 @@
   AI Engineer Workstation - White Glass Edition
 =========================================================*/
 
+/* Reset GTK defaults */
 * {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 13px;
@@ -9,14 +10,24 @@
     min-height: 0;
 }
 
+button {
+    all: unset;
+    border: none;
+    box-shadow: none;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
 window#waybar {
     background: transparent;
     color: #e5e9f0;
 }
 
-/* ------------------------------------------------------- */
-/* Floating Modules */
-/* ------------------------------------------------------- */
+/* -------------------------------------------------------
+   Floating Modules
+------------------------------------------------------- */
 
 #custom-logo,
 #workspaces,
@@ -26,7 +37,8 @@ window#waybar {
 #network,
 #bluetooth,
 #pulseaudio,
-#tray {
+#tray,
+#mpris {
     background: rgba(18, 20, 25, 0.40);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
@@ -34,9 +46,9 @@ window#waybar {
     padding: 0 16px;
 }
 
-/* ------------------------------------------------------- */
-/* Arch Logo */
-/* ------------------------------------------------------- */
+/* -------------------------------------------------------
+   Arch Logo
+------------------------------------------------------- */
 
 #custom-logo {
     color: #ffffff;
@@ -48,22 +60,25 @@ window#waybar {
     background: rgba(255,255,255,0.10);
 }
 
-/* ------------------------------------------------------- */
-/* Workspaces */
-/* ------------------------------------------------------- */
+/* -------------------------------------------------------
+   Workspaces
+------------------------------------------------------- */
 
 #workspaces {
     padding: 4px;
 }
 
 #workspaces button {
-    background: transparent;
-    border: none;
-    border-radius: 12px;
     color: #8b949e;
+    background: transparent;
+
+    min-width: 24px;
+    min-height: 24px;
+
     margin: 2px;
-    padding: 0 14px;
-    transition: all 180ms ease;
+    padding: 0 10px;
+
+    border-radius: 12px;
 }
 
 #workspaces button:hover {
@@ -74,7 +89,6 @@ window#waybar {
 #workspaces button.active {
     background: #ffffff;
     color: #111111;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.10);
 }
 
 #workspaces button.urgent {
@@ -82,9 +96,9 @@ window#waybar {
     color: #ffffff;
 }
 
-/* ------------------------------------------------------- */
-/* Modules */
-/* ------------------------------------------------------- */
+/* -------------------------------------------------------
+   Modules
+------------------------------------------------------- */
 
 #clock,
 #cpu,
@@ -92,13 +106,10 @@ window#waybar {
 #network,
 #bluetooth,
 #pulseaudio,
-#tray {
+#tray,
+#mpris {
     color: #e5e9f0;
 }
-
-/* ------------------------------------------------------- */
-/* Hover */
-/* ------------------------------------------------------- */
 
 #clock:hover,
 #cpu:hover,
@@ -106,13 +117,39 @@ window#waybar {
 #network:hover,
 #bluetooth:hover,
 #pulseaudio:hover,
-#tray:hover {
+#tray:hover,
+#mpris:hover {
     background: rgba(255,255,255,0.10);
 }
 
-/* ------------------------------------------------------- */
-/* Tooltip */
-/* ------------------------------------------------------- */
+/* -------------------------------------------------------
+   Tray
+------------------------------------------------------- */
+
+#tray {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* -------------------------------------------------------
+   Music
+------------------------------------------------------- */
+
+#mpris {
+    padding: 0 10px;
+    min-width: 0;
+}
+
+#mpris.stopped {
+    opacity: 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------------------------------------
+   Tooltip
+------------------------------------------------------- */
 
 tooltip {
     background: rgba(18,20,25,0.96);
@@ -122,45 +159,4 @@ tooltip {
 
 tooltip label {
     color: #f5f5f5;
-}
-
-/* ------------------------------------------------------- */
-/* Tray */
-/* ------------------------------------------------------- */
-
-#tray {
-    padding-left: 12px;
-    padding-right: 12px;
-}
-
-/* ------------------------------------------------------- */
-/* Music */
-/* ------------------------------------------------------- */
-
-#mpris {
-    background: rgba(18, 20, 25, 0.40);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 18px;
-    margin: 8px 6px;
-    padding: 0 10px;
-    min-width: 0;
-}
-
-#mpris:hover {
-    background: rgba(255, 255, 255, 0.10);
-}
-
-#mpris.playing {
-    color: #e5e9f0;
-}
-
-#mpris.paused {
-    color: #e5e9f0;
-}
-
-#mpris.stopped {
-    opacity: 0;
-    min-width: 0;
-    margin: 0;
-    padding: 0;
 }

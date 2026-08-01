@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "spacing": 6,
+  "spacing": 0,
 
   "modules-left": [
     "custom/logo",
@@ -23,10 +23,10 @@
   ],
 
   "custom/logo": {
-    "format": "󰌠",
-    "tooltip": false,
-    "on-click": "wofi --show drun"
-  },
+  "format": "󰣇",
+  "tooltip": false,
+  "on-click": "wofi --show drun"
+},
 
   "clock": {
     "format": "󰥔 {:%H:%M}",
