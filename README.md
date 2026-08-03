@@ -143,13 +143,27 @@ These applications are used in the screenshots and integrate well with the setup
 
 | Shortcut | Action |
 |----------|--------|
-| Super + Enter | Open Kitty |
+| Super + Q | Open Kitty |
+| Super + E | Open File Manager |
 | Super + D | Open Wofi |
-| Super + Q | Close Window |
+| Super + C | Close Active Window |
 | Super + F | Toggle Fullscreen |
-| Super + 1-9 | Switch Workspace |
-| Super + Shift + 1-9 | Move Window |
-| Super + Mouse | Move/Floating Window |
+| Super + V | Toggle Floating |
+| Super + L | Lock Screen |
+| Super + M | Toggle Desktop |
+| Super + R | Open nwg-drawer |
+| Super + G | Toggle Dashboard Workspace |
+| Super + Shift + G | Move Window to Dashboard Workspace |
+| Super + Shift + V | Clipboard History |
+| Super + Shift + S | Screenshot Selection |
+| Super + H / J / K / L | Move Focus |
+| Alt + Tab | Next Workspace |
+| Alt + Shift + Tab | Previous Workspace |
+| Super + 1-0 | Switch Workspace |
+| Super + Shift + 1-0 | Move Window to Workspace |
+| Super + Left Click | Move Window |
+| Super + Right Click | Resize Window |
+| Volume Keys | Volume Control |
 
 ---
 
