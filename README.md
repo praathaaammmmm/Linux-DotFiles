@@ -79,33 +79,20 @@ A minimal and modern **Arch Linux + Hyprland** desktop focused on **development*
 
 <table>
 <tr>
-<td width="25%">
-<img src="assets/wallpaper1.jpg" width="100%" height="120">
-</td>
-<td width="25%">
-<img src="assets/wallpaper2.jpg" width="100%" height="120">
-</td>
-<td width="25%">
-<img src="assets/wallpaper3.jpg" width="100%" height="120">
-</td>
-<td width="25%">
-<img src="assets/wallpaper4.jpg" width="100%" height="120">
-</td>
+<td width="50%"><img src="assets/wallpaper1.jpg" width="100%"></td>
+<td width="50%"><img src="assets/wallpaper2.jpg" width="100%"></td>
 </tr>
-
 <tr>
-<td width="25%">
-<img src="assets/wallpaper5.jpg" width="100%" height="120">
-</td>
-<td width="25%">
-<img src="assets/wallpaper6.jpg" width="100%" height="120">
-</td>
-<td width="25%">
-<img src="assets/wallpaper7.jpg" width="100%" height="120">
-</td>
-<td width="25%">
-<img src="assets/wallpaper8.png" width="100%" height="120">
-</td>
+<td width="50%"><img src="assets/wallpaper3.jpg" width="100%"></td>
+<td width="50%"><img src="assets/wallpaper4.jpg" width="100%"></td>
+</tr>
+<tr>
+<td width="50%"><img src="assets/wallpaper5.jpg" width="100%"></td>
+<td width="50%"><img src="assets/wallpaper6.jpg" width="100%"></td>
+</tr>
+<tr>
+<td width="50%"><img src="assets/wallpaper7.jpg" width="100%"></td>
+<td width="50%"><img src="assets/wallpaper8.png" width="100%"></td>
 </tr>
 </table>
 
