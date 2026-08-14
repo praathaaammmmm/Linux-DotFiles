@@ -75,6 +75,26 @@ A minimal and modern **Arch Linux + Hyprland** desktop focused on **development*
 
 ---
 
+## 🎬 Live Wallpapers
+
+<table>
+<tr>
+<td><img src="assets/wallpaper1.jpg" width="100%"></td>
+<td><img src="assets/wallpaper2.jpg" width="100%"></td>
+<td><img src="assets/wallpaper3.jpg" width="100%"></td>
+<td><img src="assets/wallpaper4.jpg" width="100%"></td>
+</tr>
+
+<tr>
+<td><img src="assets/wallpaper5.jpg" width="100%"></td>
+<td><img src="assets/wallpaper6.jpg" width="100%"></td>
+<td><img src="assets/wallpaper7.jpg" width="100%"></td>
+<td><img src="assets/wallpaper8.png" width="100%"></td>
+</tr>
+</table>
+
+---
+
 # 🚀 Installation
 
 ## Clone the repository
