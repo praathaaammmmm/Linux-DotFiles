@@ -29,7 +29,7 @@ window#waybar {
    Floating Modules
 ------------------------------------------------------- */
 
-#custom-logo,
+#image.cat,
 #workspaces,
 #clock,
 #cpu,
@@ -50,13 +50,12 @@ window#waybar {
    Arch Logo
 ------------------------------------------------------- */
 
-#custom-logo {
-    color: #ffffff;
-    font-size: 18px;
-    padding: 0 18px;
+#image.cat {
+    min-width: 40px;
+    padding: 0 8px 0 0;
 }
 
-#custom-logo:hover {
+#image.cat:hover {
     background: rgba(255,255,255,0.10);
 }
 

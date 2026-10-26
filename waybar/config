@@ -4,7 +4,7 @@
   "spacing": 0,
 
   "modules-left": [
-    "custom/logo",
+    "image#cat",
     "hyprland/workspaces"
   ],
 
@@ -16,17 +16,18 @@
     "cpu",
     "memory",
     "network",
-    "bluetooth",
     "pulseaudio",
     "mpris",
     "tray"
   ],
 
-  "custom/logo": {
-  "format": "󰣇",
-  "tooltip": false,
-  "on-click": "wofi --show drun"
-},
+  "image#cat": {
+    "exec": "/home/pratham/.config/waybar/scripts/cat-frame.sh",
+    "size": 28,
+    "interval": 0.333,
+    "tooltip": false,
+    "on-click": "wofi --show drun"
+  },
 
   "clock": {
     "format": "󰥔 {:%H:%M}",
