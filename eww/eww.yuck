@@ -1,0 +1,269 @@
+;; =========================================================
+;; MUSIC - DATA
+;; =========================================================
+
+(defpoll song_title :interval "2s"
+  "playerctl metadata --format '{{ title }}' 2>/dev/null || echo 'Nothing playing'")
+
+(defpoll song_artist :interval "2s"
+  "playerctl metadata --format '{{ artist }}' 2>/dev/null || echo ''")
+
+(defpoll album_art :interval "2s"
+  "playerctl metadata mpris:artUrl 2>/dev/null | sed 's#^file://##'")
+
+(defpoll player_status :interval "500ms"
+  "playerctl status 2>/dev/null || echo 'Stopped'")
+
+
+;; =========================================================
+;; MUSIC - TRACK INFORMATION
+;; =========================================================
+
+(defwidget music_track_info []
+  (box
+    :class "track-info"
+    :orientation "v"
+
+    (label
+      :class "song-title"
+      :text song_title
+      :truncate "end"
+      :max-width 220)
+
+    (label
+      :class "song-artist"
+      :text song_artist
+      :truncate "end"
+      :max-width 220)))
+
+
+;; =========================================================
+;; MUSIC - PLAYBACK CONTROLS
+;; =========================================================
+
+(defwidget music_playback_controls []
+  (box
+    :class "music-controls"
+    :orientation "h"
+    :halign "start"
+    :spacing 18
+
+    (button
+      :class "music-button"
+      :onclick "playerctl previous"
+      "󰒮")
+
+    (button
+      :class "play-button"
+      :onclick "playerctl play-pause"
+      {player_status == "Playing" ? "󰏤" : "󰐊"})
+
+    (button
+      :class "music-button"
+      :onclick "playerctl next"
+      "󰒭")))
+
+
+;; =========================================================
+;; MUSIC - POPUP WINDOW
+;; =========================================================
+
+(defwindow music_popup
+  :monitor 0
+  :namespace "music-popup"
+  :geometry (geometry
+    :x "20px"
+    :y "45px"
+    :width "420px"
+    :height "190px"
+    :anchor "top right")
+  :stacking "fg"
+  :exclusive false
+  :focusable false
+
+  (box
+    :class "music-popup"
+    :orientation "h"
+
+    (image
+      :class "album-art"
+      :path album_art
+      :image-width 150
+      :image-height 150)
+
+    (box
+      :class "music-right"
+      :orientation "v"
+
+      (music_track_info)
+      (music_playback_controls))))
+
+
+;; =========================================================
+;; CONTROL PANEL - QUICK SETTINGS
+;; =========================================================
+
+(defwidget control_panel_quick_settings []
+  (box
+    :class "control-panel-row"
+    :orientation "h"
+    :spacing 10
+    :space-evenly false
+    :valign "start"
+
+    (button
+      :class "control-panel-button"
+      :hexpand true
+      :onclick "nm-connection-editor >/tmp/eww-network.log 2>&1 &"
+      "Wi-Fi")
+
+    (button
+      :class "control-panel-button"
+      :hexpand true
+      :onclick "blueman-manager >/tmp/eww-bluetooth.log 2>&1 &"
+      "Bluetooth")))
+
+
+;; =========================================================
+;; CONTROL PANEL - BRIGHTNESS
+;; =========================================================
+
+(defpoll monitor_brightness :interval "10s"
+  "ddcutil --bus 15 --terse getvcp 10 2>/dev/null | awk '/^VCP 10 / { print $4; found=1 } END { if (!found) print 100 }'")
+
+(defwidget control_panel_brightness []
+  (box
+    :orientation "v"
+    :spacing 8
+    :space-evenly false
+
+    (label
+      :class "control-panel-title"
+      :halign "start"
+      :text "BRIGHTNESS")
+
+    (scale
+      :class "brightness-slider"
+      :orientation "h"
+      :min 10
+      :max 100
+      :value monitor_brightness
+      :round-digits 0
+      :draw-value true
+      :value-pos "right"
+      :timeout "5s"
+      :onchange "ddcutil --bus 15 setvcp 10 $(printf '%.0f' {})")))
+
+
+;; =========================================================
+;; CONTROL PANEL - WINDOW
+;; =========================================================
+
+(defwindow control_panel
+  :monitor 0
+  :namespace "control-panel"
+  :geometry (geometry
+    :x "18px"
+    :y "70px"
+    :width "320px"
+    :height "380px"
+    :anchor "top right")
+  :stacking "fg"
+  :exclusive false
+  :focusable false
+
+  (box
+    :class "control-panel"
+    :orientation "v"
+    :spacing 16
+    :space-evenly false
+
+    (label
+      :class "control-panel-title"
+      :halign "start"
+      :text "CONTROL CENTER")
+
+    (control_panel_quick_settings)
+
+    (button
+      :class "control-panel-button"
+      :halign "fill"
+      :onclick "pavucontrol >/tmp/eww-audio.log 2>&1 &"
+      "Audio mixer")
+
+    (control_panel_brightness)
+
+    (control_panel_pinned_apps)))
+
+;; =========================================================
+;; CONTROL PANEL - EDGE HANDLE
+;; =========================================================
+
+(defwindow control_panel_handle
+  :monitor 0
+  :namespace "control-panel-handle"
+  :geometry (geometry
+    :x "0px"
+    :y "70px"
+    :width "18px"
+    :height "140px"
+    :anchor "top right")
+  :stacking "fg"
+  :exclusive false
+  :focusable false
+
+  (button
+    :class "control-panel-handle"
+    :onclick "eww open --toggle control_panel"
+    ""))
+
+;; =========================================================
+;; CONTROL PANEL - PINNED APPS
+;; =========================================================
+
+(defwidget control_panel_pinned_apps []
+  (box
+    :orientation "v"
+    :spacing 8
+    :space-evenly false
+
+    (label
+      :class "control-panel-title"
+      :halign "start"
+      :text "PINNED APPS")
+
+    (box
+      :class "control-panel-row"
+      :orientation "h"
+      :spacing 8
+      :space-evenly false
+
+      (button
+        :class "control-panel-app"
+        :hexpand true
+        :onclick "brave >/dev/null 2>&1 &"
+        "Browser")
+
+      (button
+        :class "control-panel-app"
+        :hexpand true
+        :onclick "kitty >/dev/null 2>&1 &"
+        "Terminal"))
+
+    (box
+      :class "control-panel-row"
+      :orientation "h"
+      :spacing 8
+      :space-evenly false
+
+      (button
+        :class "control-panel-app"
+        :hexpand true
+        :onclick "dolphin >/dev/null 2>&1 &"
+        "Files")
+
+      (button
+        :class "control-panel-app"
+        :hexpand true
+        :onclick "code >/dev/null 2>&1 &"
+        "Code"))))

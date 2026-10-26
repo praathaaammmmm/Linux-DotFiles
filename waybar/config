@@ -22,7 +22,7 @@
   ],
 
   "image#cat": {
-    "exec": "/home/pratham/.config/waybar/scripts/cat-frame.sh",
+    "exec": "bash \"$HOME/.config/waybar/scripts/cat-frame.sh\"",
     "size": 28,
     "interval": 0.333,
     "tooltip": false,

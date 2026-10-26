@@ -1,0 +1,224 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font";
+}
+
+
+/* =========================================================
+   MUSIC - GLASS CARD
+   ========================================================= */
+
+.music-popup {
+  background: rgba(20, 22, 28, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: none;
+
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.09),
+    rgba(255, 255, 255, 0.015) 45%,
+    rgba(255, 255, 255, 0.025)
+  );
+}
+
+.music-popup:hover {
+  border-color: rgba(255, 255, 255, 0.21);
+}
+
+
+/* =========================================================
+   MUSIC - ALBUM ART
+   ========================================================= */
+
+.album-art {
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 13px;
+  margin-right: 18px;
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   MUSIC - TRACK INFORMATION
+   ========================================================= */
+
+.music-right {
+  min-width: 220px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.track-info {
+  min-width: 220px;
+}
+
+.song-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.96);
+  margin-bottom: 7px;
+}
+
+.song-artist {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+
+/* =========================================================
+   MUSIC - PLAYBACK CONTROLS
+   ========================================================= */
+
+.music-controls {
+  margin-top: 35px;
+}
+
+.music-button {
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.music-button:hover {
+  background: rgba(255, 255, 255, 0.11);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.play-button {
+  min-width: 42px;
+  min-height: 42px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: white;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 5px 15px rgba(0, 0, 0, 0.20);
+}
+
+.play-button:hover {
+  background: rgba(255, 255, 255, 0.17);
+}
+
+
+/* =========================================================
+   CONTROL PANEL - GLASS SURFACE
+   ========================================================= */
+
+.control-panel {
+  background-color: #1a1c22;
+
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.09),
+    rgba(255, 255, 255, 0.015) 45%,
+    rgba(255, 255, 255, 0.025)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.control-panel-title {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.control-panel-placeholder {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================================
+   CONTROL PANEL - BUTTONS
+   ========================================================= */
+
+.control-panel-button {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 12px;
+  padding: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+}
+
+.control-panel-button:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================================================
+   CONTROL PANEL - BRIGHTNESS
+   ========================================================= */
+  
+.brightness-slider trough {
+  min-height: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.brightness-slider highlight {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.brightness-slider slider {
+  min-width: 16px;
+  min-height: 16px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* =========================================================
+   CONTROL PANEL - EDGE HANDLE 
+   ========================================================= */
+  
+  /* CONTROL PANEL - EDGE HANDLE */
+
+.control-panel-handle {
+  background: rgba(18, 20, 25, 0.40);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  margin: 0 4px;
+}
+
+.control-panel-handle:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* =========================================================
+   CONTROL PANEL - PINNED APPS
+   ========================================================= */
+
+.control-panel-app {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 6px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 11px;
+}
+
+.control-panel-app:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.20);
+  color: white;
+}

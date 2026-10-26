@@ -14,6 +14,9 @@ A minimal and modern **Arch Linux + Hyprland** desktop focused on **development*
 
 - Minimal Hyprland desktop
 - Floating glass Waybar
+- Tiny animated Waybar cat launcher
+- Eww control center with Wi-Fi, Bluetooth, audio, brightness, and pinned apps
+- Liquid-glass music popup
 - Tokyo Night inspired theme
 - Fast Wofi launcher
 - Kitty terminal
@@ -38,7 +41,9 @@ A minimal and modern **Arch Linux + Hyprland** desktop focused on **development*
 | Idle Daemon | Hypridle |
 | Bluetooth | Blueman |
 | Network | NetworkManager Applet |
-| Wallpaper | mpvpaper |
+| Control Center | Eww |
+| Wallpaper | Waypaper |
+| Media Control | Playerctl |
 | Theme | Tokyo Night |
 
 ---
@@ -48,6 +53,12 @@ A minimal and modern **Arch Linux + Hyprland** desktop focused on **development*
 ## Desktop
 
 <img src="assets/desktop.png" width="100%">
+
+---
+
+## Control Center
+
+<img src="assets/control_center.png" alt="Eww Control Center" width="100%">
 
 ---
 
@@ -113,13 +124,27 @@ cd Linux-DotFiles
 sudo pacman -S \
 hyprland \
 waybar \
+eww \
 kitty \
 wofi \
 hyprlock \
 hypridle \
 swaync \
 blueman \
-network-manager-applet
+networkmanager \
+network-manager-applet \
+waypaper \
+playerctl \
+pavucontrol \
+pipewire \
+wireplumber \
+pipewire-pulse \
+swayosd \
+cliphist \
+wl-clipboard \
+grim \
+slurp \
+nwg-drawer
 ```
 
 ## Install the required fonts
@@ -136,11 +161,18 @@ noto-fonts-emoji
 ```bash
 cp -r hypr ~/.config/
 cp -r waybar ~/.config/
+cp -r eww ~/.config/
 cp -r kitty ~/.config/
 cp -r wofi ~/.config/
 ```
 
 Reload Hyprland or restart the applications.
+
+### Control Center Notes
+
+- Pinned app buttons launch Brave, Kitty, Dolphin, and VS Code. Change these commands in eww/eww.yuck to suit your system.
+- Monitor brightness uses ddcutil with I2C bus 15. Set the appropriate bus for your display, or remove the brightness widget if DDC/CI is unavailable.
+- The Waybar cat uses local frames in waybar/assets and remains clickable to open Wofi.
 
 ---
 
@@ -157,7 +189,7 @@ These applications are used in the screenshots and integrate well with the setup
 - VLC
 - btop
 - fastfetch
-- mpvpaper
+- waypaper
 - Polychromatic
 
 ---
@@ -206,6 +238,9 @@ These applications are used in the screenshots and integrate well with the setup
 ├── hypr/
 ├── kitty/
 ├── waybar/
+│   ├── assets/
+│   └── scripts/
+├── eww/
 ├── wofi/
 ├── README.md
 ```
